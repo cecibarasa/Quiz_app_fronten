@@ -10,7 +10,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthenticationService } from './service/authenication/authentication.service';
-import
+import { AuthInterceptor } from '../app/Interceptor/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import
   ],
   providers: [AuthenticationService, {
     provide:HTTP_INTERCEPTORS,
-    useClass: Auth,
+    useClass: AuthInterceptor,
     multi: true
   }],
   bootstrap: [AppComponent]
