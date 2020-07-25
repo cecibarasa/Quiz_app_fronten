@@ -9,7 +9,7 @@ export class ValidationService {
   constructor() { }
 
   validateUserRegistration(user: User){
-    if(user.email == '' || user.username == '' || user.password == ''){
+    if(user.firstName == '' || user.lastName == '' || user.email == '' || user.username == '' || user.password == ''){
       return false;
     }else{
       return true

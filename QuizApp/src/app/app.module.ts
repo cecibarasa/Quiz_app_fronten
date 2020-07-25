@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,9 +25,10 @@ import { AuthInterceptor } from '../app/Interceptor/auth-interceptor';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule
   ],
-  providers: [AuthenticationService, {
+  providers: [AuthenticationService, FlashMessagesService,{
     provide:HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
