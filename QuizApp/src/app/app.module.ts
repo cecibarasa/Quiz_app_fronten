@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
 
@@ -43,7 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
 
     HttpClientModule,
-    FlashMessagesModule
+    FlashMessagesModule,
 
     ReactiveFormsModule,
 

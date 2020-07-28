@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
   isSuccessful: boolean;
   errorMessage;
 
-  onSubmit(form: NgForm){
+  onSubmit(){
 
     //validation of registration
     if(!this.validateService.validateUserRegistration(this.user)){

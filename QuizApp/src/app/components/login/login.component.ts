@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     password: null
   }
 
-  onLogin(form: NgForm){
+  onLogin(){
     this.authService.authenticateUser(this.loginCl).subscribe(
       res => {
         this.authService.setToken(res['token']);
