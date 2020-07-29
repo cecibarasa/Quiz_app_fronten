@@ -6,7 +6,7 @@ import {HomePageComponent} from "./components/home-page/home-page.component";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserProfileComponent } from './components/dashboard/profile/user-profile/user-profile.component';
 import { EditProfileComponent } from './components/dashboard/profile/edit-profile/edit-profile.component';
-// import { EditProfileComponent } from '.components/dashboard/profile/user-profile.component';
+import { QuizComponent } from './components/quizes/quiz/quiz.component';
 
 
 let routes: Routes;
@@ -17,7 +17,9 @@ routes = [
   {path: 'signup-page', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'user', component: UserProfileComponent },
-  { path:'edit', component: EditProfileComponent },
+  { path: 'edit', component: EditProfileComponent },
+  { path: 'quiz', component: QuizComponent },
+  
 ];
 
 @NgModule({

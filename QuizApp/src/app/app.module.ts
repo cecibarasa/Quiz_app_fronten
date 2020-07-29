@@ -19,6 +19,7 @@ import { UserProfileComponent } from './components/dashboard/profile/user-profil
 import { EditProfileComponent } from './components/dashboard/profile/edit-profile/edit-profile.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { QuizComponent } from './components/quizes/quiz/quiz.component';
 // import { ComponentsComponent } from './dashboard/components/components.component';
 
 
@@ -33,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     UserProfileComponent,
     EditProfileComponent,
+    QuizComponent,
     // ComponentsComponent
   ],
   imports: [
