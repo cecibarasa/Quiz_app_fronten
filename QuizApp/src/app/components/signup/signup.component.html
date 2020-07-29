@@ -1,60 +1,62 @@
 <div class="RegisterMain">
-  <!--  Open Navbar-->
-  <nav class="navbar ">
-    <a class="navbar-brand" routerLink="homepage">QUIZZ</a>
-  </nav>
-  <!--  Close Navbar-->
+    <!--  Open Navbar-->
+    <nav class="navbar ">
+        <a class="navbar-brand" routerLink="/homepage">QUIZZ</a>
+    </nav>
+    <!--  Close Navbar-->
 
-  <section id="register-form">
-    <div class="register-link-icon">
-      <!--      <img src="./assets/Images/free-user-login-icon-305-thumb.png" alt="login">-->
-      <i class="fas fa-user"></i>
-    </div>
-    <div class="card ">
-      <div class="row">
-        <!-- FirstName -->
-        <div class="col-md-6">
-          <div class="form-group" style="width: 250px">
-            <input type="text" class="form-control" id="firstName" placeholder="FirstName">
-          </div>
+    <section id="register-form">
+        <div class="register-link-icon">
+            <!--      <img src="./assets/Images/free-user-login-icon-305-thumb.png" alt="login">-->
+            <i class="fas fa-user"></i>
         </div>
-<!--        LastName-->
-        <div class="col-md-6">
-          <div class="form-group" style="width: 250px">
-            <input type="text" class="form-control" id="lastName" placeholder="LastName">
-          </div>
-        </div>
-      </div>
-      <!-- Email -->
-      <div class="form-group">
-        <i class="fas fa-envelope"></i>
-        <input type="text" class="form-control" id="email" placeholder="Email">
-      </div>
-      <!-- Password -->
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group" style="width: 250px">
-            <input type="password" class="form-control" id="password" placeholder="Password">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group" style="width: 250px">
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-          </div>
-        </div>
-      </div>
+        <div class="card fadeIn">
+            <form class="text-center border border-light   p-5" *ngIf="!isSuccessful" #form='ngForm'>
+                <flash-messages></flash-messages>
+                <div class="row">
+                    <!-- FirstName -->
+                    <div class="col-md-6">
+                        <div class="form-group" style="width: 250px">
+                            <input type="text" class="form-control" id="firstName" placeholder="FirstName" name="firstName" [(ngModel)]="user.firstName">
+                        </div>
+                    </div>
+                    <!--        LastName-->
+                    <div class="col-md-6">
+                        <div class="form-group" style="width: 250px">
+                            <input type="text" class="form-control" id="lastName" placeholder="LastName" name="lastName" [(ngModel)]="user.lastName">
+                        </div>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="user.email">
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" style="width: 250px">
+                            <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" style="width: 250px">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div>
 
 
-      <div class="form-group">
-        <button class="btn">SignUp</button>
-      </div>
-      <!-- Register -->
-      <div class="form-group">
-        <p class="login-link">Already a member?
-          <a routerLink="login-page">Login</a>
-        </p>
-      </div>
-
-    </div>
-  </section>
+                <div class="form-group" style="padding-top: 50px;">
+                    <button class="btn" type="submit" (click)="onSubmit()">SignUp</button>
+                </div>
+                <!-- Register -->
+                <div class="form-group">
+                    <p class="login-link">Already a member?
+                        <a routerLink="/login-page">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
 </div>
