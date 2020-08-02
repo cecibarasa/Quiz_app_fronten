@@ -1,11 +1,22 @@
 <div class="container">
-    <div class="row" *ngFor="let questions of quizService">
-        <div class=" col-s8 offset-s2 ">
-            <div>
-                <span>{{questions.attempt+1}}</span>
-                <!-- <p>{{questions.questions[questions.attempt].questions}}</p> -->
+    <div class="row" *ngFor="let quiz of quizService.questions">
+        <div class="col s8 offset-s2 ">
+            <!-- <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span> -->
+            <div class="card  " style="background-color: #1C7C54;">
+                <div class="card-content white-text ">
+                    <span class="card-title ">{{quiz.questions[0].content}}</span>
+                </div>
+
+                <div class="card-action ">
+                    <ul class="collection answer ">
+                        <ng-container *ngFor="let answer of quiz.questions[0].answers;let i=index ">
+                            <li class="collection-item " (click)="Answer() " style="cursor: pointer;">
+                                {{ answer }}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
 </div>

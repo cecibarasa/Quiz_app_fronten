@@ -13,6 +13,10 @@ export class QuizComponent implements OnInit {
   seconds: number;
   duration;
   attempt: number;
+  title: string
+  description: string
+  answers: any = [];
+  content: any = [];
 
   constructor(private router: Router, public quizService: QuizService) { }
 
@@ -43,6 +47,16 @@ export class QuizComponent implements OnInit {
     this.quizService.duration = setInterval(() => {
       this.quizService.seconds++;
     }, 1000);
+  }
+
+  Answer() {
+    console.log('trucktar')
+    // this.quizService.questions[this.quizService.attempt].answer = choice;
+    // this.quizService.attempt++;
+    // if (this.quizService.attempt == 10) {
+    //   clearInterval(this.quizService.duration);
+    //   this.router.navigate(['result'])
+    // }
   }
 
 }

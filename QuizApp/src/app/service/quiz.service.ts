@@ -19,8 +19,11 @@ export class QuizService {
 
   private_url: 'https://quizzzin.herokuapp.com/';
 
-  constructor(private http: HttpClient, private endpoint: EndpointService) {}
-
+  constructor(private http: HttpClient, private endpoint: EndpointService) { }
+  
+  displayTimeElapsed() {
+    return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);
+}
   // insertParticipant(username: string, email: string) {
   //   var body = {
   //     Name: username,
