@@ -12,6 +12,10 @@ export class QuizService {
   seconds: number;
   duration;
   attempt: number;
+  title: string
+  description: string
+  answers: any = [];
+  content: any = [];
 
   private_url: 'https://quizzzin.herokuapp.com/';
 
@@ -26,6 +30,6 @@ export class QuizService {
   // }
 
   getQuizes() {
-    return this.http.get(environment.quizApi + 'quizzes/');
+    return this.http.get(environment.quizApi + 'quizzes/' );  
   }
 }

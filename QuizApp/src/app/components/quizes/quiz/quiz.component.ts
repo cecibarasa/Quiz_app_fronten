@@ -9,26 +9,39 @@ import { AuthenticationService } from 'src/app/service/authenication/authenticat
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  questions: any =[];
+  seconds: number;
+  duration;
+  attempt: number;
 
-  constructor(private router: Router, private quizservice: QuizService,private authService: AuthenticationService,) { }
+  constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
 
-    this.quizservice.seconds = 0;
-    this.quizservice.attempt = 0;
+    this.quizService.seconds = 0;
+    this.quizService.attempt = 0;
 
-    this.quizservice.getQuizes().subscribe(
+    this.quizService.getQuizes().subscribe(
       (data: any) => {
-        this.quizservice.questions = data;
-        console.log(this.quizservice.questions)
+        this.quizService.questions = data;
+        console.log(this.quizService.questions)
         this.startTimer();
+        this.router.navigate(['/quiz']);
+      },
+      (err: any) => {
+        let {error} = err
+        this.quizService.questions = error;
+        console.log(this.quizService.questions)
+        // console.log(error)
+        this.startTimer();
+        this.router.navigate(['/quiz']);
       }
     );
   }
 
   startTimer() {
-    this.quizservice.duration = setInterval(() => {
-      this.quizservice.seconds++;
+    this.quizService.duration = setInterval(() => {
+      this.quizService.seconds++;
     }, 1000);
   }
 
