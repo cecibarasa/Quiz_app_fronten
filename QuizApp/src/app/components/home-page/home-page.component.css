@@ -1,83 +1,86 @@
 #hero {
-  float: right;
-  height: 100px;
-  top: 234px;
+    float: right;
+    height: 100px;
+    top: 234px;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #hero .hero-container {
-  position: absolute;
-  float: right;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
+    position: absolute;
+    float: right;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #hero h3 {
-  color: rgb(26, 25, 25);
-  font-size: 26px;
-  padding: 10px 30px;
-  margin-bottom: 30px;
-  border-radius: 50px;
+    color: rgb(26, 25, 25);
+    font-size: 26px;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #hero p {
-  margin: 0 0 10px 0;
-  font-size: 30px;
-  font-weight: 150px;
-  line-height: 56px;
-  color: rgb(26, 25, 25);
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    font-weight: 150px;
+    line-height: 56px;
+    color: rgb(26, 25, 25);
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 30px 9px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #111111;
-  background: #eb971a;
-  text-decoration: none;
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 30px 9px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #FFFFFF;
+    background: #f45d01;
+    text-decoration: none;
 }
 
 #hero .btn-log-in {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 30px 9px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #111111;
-  background: #9dac16;
+    font-family: "Roboto Mono";
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 30px 9px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #FFFFFF;
+    background: #1c7c54;
 }
 
 @media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
+    #hero {
+        background-attachment: fixed;
+    }
 }
 
 @media (max-width: 768px) {
-  #hero h3 {
-    font-size: 22px;
-  }
-  #hero p {
-    font-size: 28px;
-    line-height: 36px;
-  }
+    #hero h3 {
+        font-size: 22px;
+    }
+    #hero p {
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
 
 #img {
-  object-position: 20% 10px;
-  margin-bottom: -500px;
+    object-position: 20% 10px;
+    margin-bottom: -500px;
 }

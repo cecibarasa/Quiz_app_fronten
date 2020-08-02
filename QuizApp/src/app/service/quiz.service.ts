@@ -1,9 +1,31 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { EndpointService } from './endpoint.service';
+import { Quiz } from '../models/quiz';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuizService {
+  questions: any = [];
+  seconds: number;
+  duration;
+  attempt: number;
 
-  constructor() { }
+  private_url: 'https://quizzzin.herokuapp.com/';
+
+  constructor(private http: HttpClient, private endpoint: EndpointService) {}
+
+  // insertParticipant(username: string, email: string) {
+  //   var body = {
+  //     Name: username,
+  //     Email: email
+  //   }
+  //   return this.http.post(this.private_url, body);
+  // }
+
+  getQuizes() {
+    return this.http.get(environment.quizApi + 'quizzes/');
+  }
 }

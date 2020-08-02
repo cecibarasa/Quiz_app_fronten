@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  authentcationApi: "https://quizzzin.herokuapp.com/auth/"
+  authentcationApi: "https://quizzzin.herokuapp.com/auth/",
+  quizApi: "https://quizzzin.herokuapp.com/"
 };
 
 /*
