@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
-import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  FlashMessagesModule,
+  FlashMessagesService,
+} from 'angular2-flash-messages';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AuthenticationService } from './service/authenication/authentication.service';
 import { AuthInterceptor } from '../app/Interceptor/auth-interceptor';
+import { RedirectInterceptor } from '../app/Interceptor/redirect.interceptor';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -20,10 +25,10 @@ import { EditProfileComponent } from './components/dashboard/profile/edit-profil
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuizComponent } from './components/quizes/quiz/quiz.component';
-import { AnswersComponent } from './components/quizes/answers/answers.component';
+import { QuizService } from './service/quiz.service';
+import { AuthGuard } from './auth/auth.guard';
+import { ResultsComponent } from './components/quizes/results/results.component';
 // import { ComponentsComponent } from './dashboard/components/components.component';
-
-
 
 @NgModule({
   declarations: [
@@ -36,7 +41,7 @@ import { AnswersComponent } from './components/quizes/answers/answers.component'
     UserProfileComponent,
     EditProfileComponent,
     QuizComponent,
-    AnswersComponent,
+    ResultsComponent,
     // ComponentsComponent
   ],
   imports: [
@@ -49,13 +54,15 @@ import { AnswersComponent } from './components/quizes/answers/answers.component'
     FlashMessagesModule,
 
     ReactiveFormsModule,
-
   ],
-  providers: [AuthenticationService, FlashMessagesService,{
-    provide:HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthenticationService,
+    FlashMessagesService,
+    QuizService,
+    AuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: RedirectInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

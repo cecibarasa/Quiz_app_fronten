@@ -16,18 +16,19 @@ export class AuthInterceptor implements HttpInterceptor {
     constructor(private authService: AuthenticationService, private router: Router) { }
 
     intercept(req: HttpRequest<any>, next: HttpHandler) {
-      if(req.headers.get('noauth')){
+      console.log(req.headers.get('noauth'))
+      if(req.headers.get("noauth") === "True"){
         return next.handle(req.clone());
       }else{
         const clonereq = req.clone({
-          headers: req.headers.set("Authorization", "Bearer " +this.authService.getToken())
+          headers: req.headers.set("Authorization", "Token " + this.authService.getToken())
         })
         return next.handle(clonereq).pipe(
           tap(
             event => {},
             err => {
               if(err.error.auth == false){
-                this.router.navigateByUrl('/main-login')
+                this.router.navigateByUrl('/login')
               }
             }
           )
@@ -35,6 +36,3 @@ export class AuthInterceptor implements HttpInterceptor {
       }
     }
 }
- 
-
-
