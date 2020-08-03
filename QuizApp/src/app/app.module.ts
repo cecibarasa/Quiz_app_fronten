@@ -25,9 +25,13 @@ import { EditProfileComponent } from './components/dashboard/profile/edit-profil
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuizComponent } from './components/quizes/quiz/quiz.component';
+
 import { QuizService } from './service/quiz.service';
 import { AuthGuard } from './auth/auth.guard';
 import { ResultsComponent } from './components/quizes/results/results.component';
+
+import { AnswersComponent } from './components/quizes/answers/answers.component';
+
 // import { ComponentsComponent } from './dashboard/components/components.component';
 
 @NgModule({
@@ -41,7 +45,11 @@ import { ResultsComponent } from './components/quizes/results/results.component'
     UserProfileComponent,
     EditProfileComponent,
     QuizComponent,
+
     ResultsComponent,
+
+    AnswersComponent,
+
     // ComponentsComponent
   ],
   imports: [
