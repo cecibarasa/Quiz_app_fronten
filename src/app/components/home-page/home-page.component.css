@@ -4,6 +4,9 @@
   top: 234px;
 }
 
+#hero {
+  border: 1px solid red;
+}
 #hero .hero-container {
   position: absolute;
   float: right;
@@ -20,8 +23,8 @@
 
 #hero h3 {
   color: rgb(26, 25, 25);
-  font-size: 26px;
   padding: 10px 30px;
+  margin-top: auto;
   margin-bottom: 30px;
   border-radius: 50px;
 
