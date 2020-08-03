@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http'
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'
 import { environment } from '../../../environments/environment';
 import { User } from 'src/app/models/user/user';
 import { Login } from 'src/app/models/user/login';
@@ -12,18 +12,16 @@ export class AuthenticationService {
 
   constructor(public http: HttpClient) { }
 
-  // noAuthHeader = { headers: new HttpHeaders({ 'noAuth': 'True' })}
+  noAuthHeader = { headers: new HttpHeaders({ 'noAuth': 'True' })}
 
   //Register Client
   addUser(user: User) {
-    // return this.http.post(environment.authentcationApi + 'signup/', user, this.noAuthHeader);
-    return this.http.post(environment.authentcationApi + 'signup/', user);
+    return this.http.post(environment.authentcationApi + 'signup/', user, this.noAuthHeader);
   }
 
   //User authentication
   authenticateUser(login: Login) {
-    // return this.http.post(environment.authentcationApi + 'login/', + login, this.noAuthHeader)
-    return this.http.post(environment.authentcationApi + 'login/', login);
+    return this.http.post(environment.authentcationApi + 'login/', + login, this.noAuthHeader)
   }
 
   //Helper Method (TOKENS)
