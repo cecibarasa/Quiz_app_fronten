@@ -24,6 +24,7 @@
   padding: 10px 30px;
   margin-bottom: 30px;
   border-radius: 50px;
+
 }
 
 #hero p {
@@ -47,6 +48,7 @@
   background: #eb971a;
   text-decoration: none;
 }
+
 
 #hero .btn-log-in {
   font-family: "Poppins", sans-serif;
