@@ -9,6 +9,7 @@ import { EditProfileComponent } from './components/dashboard/profile/edit-profil
 import { QuizComponent } from './components/quizes/quiz/quiz.component';
 import { ResultsComponent } from './components/quizes/results/results.component';
 import { AuthGuard } from './auth/auth.guard';
+import { GuardGuard } from './guard/guard.guard';
 
 
 let routes: Routes;
@@ -18,10 +19,10 @@ routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'user', component: UserProfileComponent },
-  { path: 'edit', component: EditProfileComponent },
-  { path: 'quiz', component: QuizComponent }, //, canActivate: [AuthGuard]
-  { path: 'result', component: ResultsComponent } //, canActivate: [AuthGuard]
+  { path: 'user', component: UserProfileComponent, canActivate:[GuardGuard] },
+  { path: 'edit', component: EditProfileComponent , canActivate:[GuardGuard] },
+  { path: 'quiz', component: QuizComponent, canActivate:[GuardGuard]  },
+  { path: 'result', component: ResultsComponent , canActivate:[GuardGuard] }
   
 ];
 
