@@ -4,9 +4,7 @@
   top: 234px;
 }
 
-#hero {
-  border: 1px solid red;
-}
+
 #hero .hero-container {
   position: absolute;
   float: right;
