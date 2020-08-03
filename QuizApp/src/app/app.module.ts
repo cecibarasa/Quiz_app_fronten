@@ -27,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { QuizComponent } from './components/quizes/quiz/quiz.component';
 import { QuizService } from './service/quiz.service';
 import { AuthGuard } from './auth/auth.guard';
+import { ResultsComponent } from './components/quizes/results/results.component';
 // import { ComponentsComponent } from './dashboard/components/components.component';
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AuthGuard } from './auth/auth.guard';
     UserProfileComponent,
     EditProfileComponent,
     QuizComponent,
+    ResultsComponent,
     // ComponentsComponent
   ],
   imports: [

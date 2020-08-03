@@ -8,14 +8,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class QuizService {
-  questions: any = [];
+  quiz: [];
   seconds: number;
   duration;
-  attempt: number;
-  title: string
-  description: string
-  answers: any = [];
-  content: any = [];
+  qnProgress: number;
+  correctAnswerCount: number = 0;
 
   private_url: 'https://quizzzin.herokuapp.com/';
 
@@ -34,5 +31,10 @@ export class QuizService {
 
   getQuizes() {
     return this.http.get(environment.quizApi + 'quizzes/' );  
+  }
+
+  submitScore(answers) {
+    console.log(answers);
+    return this.http.post(environment.quizApi + 'attempt/', answers);
   }
 }

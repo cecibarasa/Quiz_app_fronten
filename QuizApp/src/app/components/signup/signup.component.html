@@ -1,67 +1,53 @@
 <div class="RegisterMain">
     <!--  Open Navbar-->
-    <nav class="navbar ">
+    <!-- <nav class="navbar ">
         <a class="navbar-brand" routerLink="/homepage">QUIZZ</a>
-    </nav>
+    </nav> -->
     <!--  Close Navbar-->
+    <div class="row" style="max-width: 520px; margin: 0 auto;">
+        <form class="col s12" [formGroup]='signupForm' (ngSubmit)='onSubmit()'>
+            <flash-messages></flash-messages>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate" formControlName="first_name">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate" formControlName="last_name">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="username" type="text" class="validate" formControlName="username">
+                    <label for="last_name">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="password" type="password" class="validate" formControlName="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="password" type="password" class="validate" formControlName="cpassword">
+                    <label for="password">Repeat Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" formControlName="email">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit">SignUp</button>
+            </div>
+            <div class="form-group">
+                <p class="login-link">Already a member?
+                    <a routerLink="/login">Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
 
-    <section id="register-form">
-        <div class="register-link-icon">
-            <!--      <img src="./assets/Images/free-user-login-icon-305-thumb.png" alt="login">-->
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="card fadeIn">
-            <form class="text-center border border-light p-5" [formGroup]='signupForm' (ngSubmit)='onSubmit()'>
-                <flash-messages></flash-messages>
-                <div class="row">
-                    <!-- FirstName -->
-                    <div class="col-md-6">
-                        <div class="form-group" style="width: 250px">
-                            <input type="text" class="form-control" id="firstName" placeholder="FirstName" formControlName="first_name">
-                        </div>
-                    </div>
-                    <!--        LastName-->
-                    <div class=" col-md-6 ">
-                        <div class="form-group " style="width: 250px ">
-                            <input type="text " class="form-control " id="lastName " placeholder="LastName " formControlName="last_name">
-                        </div>
-                    </div>
-                    <div class=" col-md-6 ">
-                        <div class="form-group " style="width: 250px ">
-                            <input type="text " class="form-control " id="user " placeholder="username " formControlName="username">
-                        </div>
-                    </div>
-                </div>
-                <!-- Email -->
-                <div class="form-group ">
-                    <!-- <i class="fas fa-envelope "></i> -->
-                    <input type="email" class="form-control " id="email " placeholder="Email " formControlName="email">
-                </div>
-                <!-- Password -->
-                <div class="row ">
-                    <div class="col-md-6 ">
-                        <div class="form-group " style="width: 250px ">
-                            <input type="password " class="form-control " id="password " placeholder="Password " formControlName="password">
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="form-group " style="width: 250px ">
-                            <input type="password" class="form-control " id="confirmPassword " placeholder="Confirm Password " formControlName="cpassword">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="form-group " style="padding-top: 50px; ">
-                    <button class="btn " type="submit ">SignUp</button>
-                </div>
-                <!-- Register -->
-                <div class="form-group ">
-                    <p class="login-link ">Already a member?
-                        <a routerLink="/login ">Login</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </section>
-</div>formControlName
+</div>
