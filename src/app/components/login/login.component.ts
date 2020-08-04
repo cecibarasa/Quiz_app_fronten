@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
 import { AuthenticationService } from 'src/app/service/authenication/authentication.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Login } from 'src/app/models/user/login';
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -11,6 +13,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
 
   constructor(private authService: AuthenticationService,
               private router: Router,
@@ -45,3 +48,4 @@ export class LoginComponent implements OnInit {
 
 }
 }
+

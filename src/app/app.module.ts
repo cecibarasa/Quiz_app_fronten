@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {
   FlashMessagesModule,
   FlashMessagesService,
 } from 'angular2-flash-messages';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 import { AuthenticationService } from './service/authenication/authentication.service';
 import { AuthInterceptor } from '../app/Interceptor/auth-interceptor';
@@ -39,6 +42,7 @@ import { AnswersComponent } from './components/quizes/answers/answers.component'
     AppComponent,
     LoginComponent,
     SignupComponent,
+
     HomePageComponent,
     DashboardComponent,
     NavbarComponent,
@@ -51,10 +55,12 @@ import { AnswersComponent } from './components/quizes/answers/answers.component'
     AnswersComponent,
 
     // ComponentsComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     FontAwesomeModule,
     FormsModule,
 

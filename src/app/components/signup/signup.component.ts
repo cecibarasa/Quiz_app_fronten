@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { User } from 'src/app/models/user/user';
 import { AuthenticationService } from 'src/app/service/authenication/authentication.service';
 import { ValidationService } from 'src/app/service/validation/validation.service';
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
+
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
@@ -79,4 +81,3 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-}
