@@ -1,7 +1,0 @@
-{
-    "*": {
-        "target": "https://quizzzin.herokuapp.com/",
-        "secure": false,
-        "logLevel": "debug"
-    }
-}
