@@ -1,63 +1,170 @@
-.loginMain{
-  position: relative;
 
-  background: #FFFFFF;
-}
-.navbar-brand{
-  position: absolute;
-  width: 381px;
-  left: 111px;
-  top: 1.86%;
-  bottom: 90.43%;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 64px;
-  line-height: 75px;
-  color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.login-icon{
-  position: absolute;
-  left: 522px;
-  top: 141px;
-  overflow: auto;
-}
-.login-icon img{
-  width: 150px;
-  height: 150px;
-}
-.card{
-  position: absolute;
-  width: 600px;
-  height: 574px;
-  left: 300px;
-  top: 200px;
-  background: #E5E5E5;
-}
-.form-group{
-  width: 400px;
-  height: 80px;
-  margin-left: 20px;
-  padding-top: 75px;
-}
-.btn{
-  position: absolute;
-  width: 120px;
-  height: 59px;
-  left: 240px;
-  top: 356px;
-  background: #F8A01D;
-  border-radius: 20px;
-
-  font-family: Mako;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 47px;
-}
-.login-link{
-  margin-top: -35px;
-  padding-left: 180px;
+.registerMain {
+    position: relative;
+    background: #FFFFFF;
 }
 
+.navbar-brand {
+    position: absolute;
+    width: 381px;
+    left: 111px;
+    top: 1.86%;
+    bottom: 90.43%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-icon {
+    position: absolute;
+    left: 522px;
+    top: 141px;
+    overflow: auto;
+}
+
+.login-icon img {
+    width: 150px;
+    height: 150px;
+}
+
+.card {
+    position: absolute;
+    width: 600px;
+    height: 550px;
+    left: 300px;
+    top: 200px;
+    background: #E5E5E5;
+}
+
+.form-group {
+    width: 400px;
+    height: 80px;
+    margin-left: 20px;
+    padding-top: 75px;
+}
+
+.btn {
+    /* position: absolute; */
+    width: 120px;
+    height: 59px;
+    left: 240px;
+    top: 356px;
+    background: #F8A01D;
+    border-radius: 20px;
+    font-family: Mako;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 47px;
+}
+
+.login-link {
+    margin-top: -35px;
+    padding-left: 180px;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+/* Simple CSS3 Fade-in Animation */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}

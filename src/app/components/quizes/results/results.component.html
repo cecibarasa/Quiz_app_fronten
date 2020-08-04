@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+        <h2 class="header">
+            Completed!
+        </h2>
+        <div class="card horizontal">
+            <div class="card-stacked">
+                <div class="card-content">
+
+                    <h3>{{score}}/{{maxScore}}</h3>
+                    <!-- <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span> -->
+                </div>
+                <div class="card-action">
+                    <button class="btn" (click)="onSubmit()">Submit</button>
+                </div>
+            </div>
+            <div class="card-action">
+                <ul class="collection">
+                    <!-- <ng-container *ngFor="let answer of question.answer;let j = index">
+                        <li *ngIf="answer != null" class="collection-item">
+                            {{answer}}
+                            <span class="badge" *ngIf="question.correct==j">
+                                <i class="material-icons green-text">check_circle</i>
+                            </span>
+                            <span class="badge red-text" *ngIf="question.answer==j && question.correct!=j">Incorrect</span>
+                        </li>
+                    </ng-container> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
