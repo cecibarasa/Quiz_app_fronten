@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <legend>Edit Profile</legend>
+            <form [formGroup]='editForm' (ngSubmit)='toProfile()'>
+                <div>
+                    <label>Bio:</label>
+                    <input type="text" placeholder="Bio..." formControlName='bio' class="form-control input">
+                </div>
+                <div>
+                    <label>Location:</label>
+                    <input type="text" placeholder="Location..." formControlName='location' class="form-control input">
+                </div>
+                <div class="image mt-2">
+                    <label>Change Profile Picture:</label><br>
+                    <input class="file-input" type="file" (change)='imageSelected($event)' name="picture">
+                </div>
+                <div class="updateButtons mt-2">
+                    <input [disabled]="!editForm.valid" type="submit" class="btn btn-outline-success btn-sm mr-2 update" value="Edit">
+                    <a class="btn btn-outline-info btn-sm backProfile" (click)='toProfile()'>Back To Profile</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

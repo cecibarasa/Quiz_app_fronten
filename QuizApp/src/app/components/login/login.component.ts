@@ -21,11 +21,11 @@ export class LoginComponent implements OnInit {
     password: null
   }
 
-  onLogin(form: NgForm){
+  onLogin(){
     this.authService.authenticateUser(this.loginCl).subscribe(
       res => {
         this.authService.setToken(res['token']);
-        this.router.navigateByUrl('/client-profile')
+        this.router.navigateByUrl('/dashboard')
       },
       err => {
         this.flashmessages.show(err, {cssClass: 'alert-danger', timeout: 3000})
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.authService.isLoggedIn()){
-      this.router.navigateByUrl('/profile')
+      this.router.navigateByUrl('/dashboard')
   }
 
 }
