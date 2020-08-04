@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     private router: Router,
     private flashmessages: FlashMessagesService,
     private fb: FormBuilder
-  ) {}
+  ) { }
 
   signupForm: FormGroup = this.fb.group({
     first_name: [''],
@@ -80,4 +80,5 @@ export class SignupComponent implements OnInit {
     // form.reset()
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+}
